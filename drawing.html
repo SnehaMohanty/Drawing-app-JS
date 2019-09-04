@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+<title> Let's Draw !</title>
+<link rel="stylesheet" href="divisions.css">
+
+<script src="scripts/box.js"></script>
+
+
+<style>
+div#colorbox{   top: 0px;
+                left:0px;
+                background:url('greenbox.png');
+				background-repeat:no-repeat;
+				background-position:center;
+				position:relative;
+				height:600px;
+				width:900px;
+				z-index:1;
+				visibility:hidden;
+				
+			   
+	}
+	
+       div#lid{
+                left:460px;
+                background:url('lid.png');
+				background-repeat:no-repeat;
+				background-position:center;
+				position:absolute;
+				height:600px;
+				width:900px;
+				z-index:1;
+				visibility:visible;
+				
+			   
+	}
+	 
+	 
+	 #open{
+	     top: 0px;
+	     background: url('lidopen.png'); 
+		 background-repeat: no-repeat; 
+		 position: absolute; 
+		 visibility: hidden; 
+         left: 1120px;   
+		 top: 60px; /* opacity: 0.9; */ 
+		 width: 100%;  
+		 height: 700px; 
+		 z-index:1;
+	 
+	 
+	 }
+	  
+</style>
+
+</head>
+
+<body style="margin :0px ; background-color:#151B54; opacity;0.4;">
+
+<div id="toolbar">
+<div id="rad">
+Brush width  <span id="radval">10</span>
+
+<div id="decrad" class="radcontrol">-</div>
+<div id="incrad" class="radcontrol">+</div>
+
+
+<div id="colors">
+<div id="lid" onClick="hide() , show(), show1()">
+<div id ="colorbox" style="cursor:url(brush.png),auto;" >
+
+  <div id="red" class="swatch" style="background-color:red; cursor:url(rbrush.png),auto;"></div>
+  <div id="blue" class="swatch "  style="background-color:blue; cursor:url(bbrush.png),auto; "></div>
+  <div id="yellow" class="swatch active "  style="background-color:yellow; cursor:url(ybrush.png),auto; "></div>
+  <div id="green" class="swatch "  style="background-color:green; cursor:url(gbrush.png),auto;"></div>
+  <div id="orange" class="swatch " style="background-color:orange; cursor:url(obrush.png),auto;"></div>
+  <div id="purple" class="swatch " style="background-color:purple; cursor:url(pbrush.png),auto;"></div>
+  <div id="white" class="swatch" style="background-color:white;"></div>
+</div>
+</div>
+</div>
+<div id="open"  onClick=" hidebox(), hide1(), showlid()"> </div>
+</div>
+<div id="water" style="display:block; background:url('pani.png'); background-repeat:no-repeat; position:absolute; top:450px; left:500px; width:180px; height:200px;"></div>
+</div>
+
+<canvas id="canvas" style="display:block; background-color:white; margin:10px; cursor:url(brush.png),auto; border: 5px solid #0099CC;">crap browser </canvas>
+
+<script src="start.js"></script>
+<script src="width.js"></script>
+<script src="colorset.js"></script>
+
+
+</body>
+
+</html>
